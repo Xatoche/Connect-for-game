@@ -20,7 +20,7 @@ body {
 
 .background-tableau-blanc {
     position: absolute;
-    z-index: -2;
+    z-index: -1;
     left: 3px;
     top: 1px;
 }
@@ -36,9 +36,7 @@ body {
 }
 
 .oval {
-    display: none;
     position: absolute;
-    z-index: -1;
     height: 72px;
     width: 72px;
 }
