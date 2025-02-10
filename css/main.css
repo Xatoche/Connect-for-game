@@ -1,0 +1,266 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #5C2DD5;
+}
+
+.main-wrapper {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.tableau-blanc {
+    position: relative;
+}
+
+.background-tableau-blanc {
+    position: absolute;
+    z-index: -2;
+    left: 3px;
+    top: 1px;
+}
+
+
+.oval-rouge {
+    display: none;
+}
+
+
+.oval-jaune {
+    display: none;
+}
+
+.oval {
+    display: none;
+    position: absolute;
+    z-index: -1;
+    height: 72px;
+    width: 72px;
+}
+
+.oval-0-0 {
+    top: 18px;
+    left: 18px;
+}
+
+.oval-0-1 {
+    top: 17px;
+    left: 104px;
+}
+
+.oval-0-2 {
+    top: 17px;
+    left: 192px;
+}
+
+.oval-0-3 {
+    top: 17px;
+    left: 280px;
+}
+
+.oval-0-4 {
+    top: 17px;
+    left: 367px;
+}
+
+.oval-0-5 {
+    top: 17px;
+    left: 455px;
+}
+
+.oval-0-6 {
+    top: 17px;
+    left: 545px;
+}
+
+/* Deuxièmes Lignes */
+
+.oval-1-0 {
+    top: 105px;
+    left: 16px;
+}
+
+.oval-1-1 {
+    top: 105px;
+    left: 105px;
+}
+
+.oval-1-2 {
+    top: 105px;
+    left: 193px;
+}
+
+.oval-1-3 {
+    top: 105px;
+    left: 281px;
+}
+
+.oval-1-4 {
+    top: 105px;
+    left: 368px;
+}
+
+.oval-1-5 {
+    top: 105px;
+    left: 456px;
+}
+
+.oval-1-6 {
+    top: 105px;
+    left: 546px;
+}
+
+/* Troisième Lignes */
+
+.oval-2-0 {
+    top: 193px;
+    left: 16px;
+}
+
+.oval-2-1 {
+    top: 193px;
+    left: 105px;
+}
+
+.oval-2-2 {
+    top: 193px;
+    left: 193px;
+}
+
+.oval-2-3 {
+    top: 193px;
+    left: 281px;
+}
+
+.oval-2-4 {
+    top: 193px;
+    left: 368px;
+}
+
+.oval-2-5 {
+    top: 193px;
+    left: 456px;
+}
+
+.oval-2-6 {
+    top: 193px;
+    left: 546px;
+}
+
+
+/* Quatrième Lignes */
+
+.oval-4-0 {
+    top: 280px;
+    left: 16px;
+}
+
+.oval-4-1 {
+    top: 280px;
+    left: 105px;
+}
+
+.oval-4-2 {
+    top: 280px;
+    left: 193px;
+}
+
+.oval-4-3 {
+    top: 280px;
+    left: 281px;
+}
+
+.oval-4-4 {
+    top: 280px;
+    left: 368px;
+}
+
+.oval-4-5 {
+    top: 280px;
+    left: 456px;
+}
+
+.oval-4-6 {
+    top: 280px;
+    left: 546px;
+}
+
+/* Cinquième Lignes */
+
+.oval-5-0 {
+    top: 366px;
+    left: 16px;
+}
+
+.oval-5-1 {
+    top: 366px;
+    left: 105px;
+}
+
+.oval-5-2 {
+    top: 366px;
+    left: 193px;
+}
+
+.oval-5-3 {
+    top: 366px;
+    left: 281px;
+}
+
+.oval-5-4 {
+    top: 366px;
+    left: 368px;
+}
+
+.oval-5-5 {
+    top: 366px;
+    left: 456px;
+}
+
+.oval-5-6 {
+    top: 366px;
+    left: 546px;
+}
+
+/* Sixième Lignes */
+
+.oval-6-0 {
+    top: 455px;
+    left: 16px;
+}
+
+.oval-6-1 {
+    top: 455px;
+    left: 105px;
+}
+
+.oval-6-2 {
+    top: 455px;
+    left: 193px;
+}
+
+.oval-6-3 {
+    top: 455px;
+    left: 281px;
+}
+
+.oval-6-4 {
+    top: 455px;
+    left: 368px;
+}
+
+.oval-6-5 {
+    top: 455px;
+    left: 456px;
+}
+
+.oval-6-6 {
+    top: 455px;
+    left: 546px;
+}
+
