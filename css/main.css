@@ -1,264 +1,232 @@
-* {
-    box-sizing: border-box;
+:root {
+    --electric-violet: #7945FF;
+    --purple-heart: #5C2DD5;
+    --brink-pink: #FD6687;
+    --golden-tanoi: #FFCE67;
+    --white: #FFF;
+    --black: #000;
+}
+body {
+    background-color: var(--electric-violet);
 }
 
-body {
-    background-color: #5C2DD5;
-}
 
 .main-wrapper {
+    align-items: center;
     display: flex;
-    position: relative;
     justify-content: center;
     min-height: 100vh;
-    align-items: center;
 }
 
-.tableau-blanc {
+.background-board {
+    position: absolute;
+}
+
+.game-board {
     position: relative;
 }
 
-.background-tableau-blanc {
+.game-board-black {
     position: absolute;
+    left: 0;
+    top: 0;
     z-index: -1;
-    left: 3px;
-    top: 1px;
 }
 
-
-.oval-rouge {
-    display: none;
-}
-
-
-.oval-jaune {
-    display: none;
-}
-
-.oval {
+.game-cell {
     position: absolute;
-    height: 72px;
-    width: 72px;
+    width: 64px;
+    height: 64px;
+    transition: .4s;
+    z-index: 1;
 }
 
-.oval-0-0 {
-    top: 18px;
+.game-cell img {
+    display: none; 
+    position: absolute; 
+    z-index: 2; 
+}
+
+.game-cell:hover {
+    opacity: .8;
+}
+
+/* First row */
+.game-cell[data-x="0"][data-y="0"] {
     left: 18px;
+    top: 18px;
+}
+.game-cell[data-x="1"][data-y="0"] {
+    left: 108px;
+    top: 18px;
+}
+.game-cell[data-x="2"][data-y="0"] {
+    left: 196px;
+    top: 18px;
+}
+.game-cell[data-x="3"][data-y="0"] {
+    left: 284px;
+    top: 18px;
+}
+.game-cell[data-x="4"][data-y="0"] {
+    left: 372px;
+    top: 18px;
+}
+.game-cell[data-x="5"][data-y="0"] {
+    left: 460px;
+    top: 18px;
+}
+.game-cell[data-x="6"][data-y="0"] {
+    left: 548px;
+    top: 18px;
 }
 
-.oval-0-1 {
-    top: 17px;
-    left: 104px;
+/* Second row */
+.game-cell[data-x="0"][data-y="1"] {
+    left: 18px;
+    top: 108px;
+}
+.game-cell[data-x="1"][data-y="1"] {
+    left: 108px;
+    top: 108px;
+}
+.game-cell[data-x="2"][data-y="1"] {
+    left: 196px;
+    top: 108px;
+}
+.game-cell[data-x="3"][data-y="1"] {
+    left: 284px;
+    top: 108px;
+}
+.game-cell[data-x="4"][data-y="1"] {
+    left: 372px;
+    top: 108px;
+}
+.game-cell[data-x="5"][data-y="1"] {
+    left: 460px;
+    top: 108px;
+}
+.game-cell[data-x="6"][data-y="1"] {
+    left: 548px;
+    top: 108px;
 }
 
-.oval-0-2 {
-    top: 17px;
-    left: 192px;
+/* Third row */
+.game-cell[data-x="0"][data-y="2"] {
+    left: 18px;
+    top: 196px;
+}
+.game-cell[data-x="1"][data-y="2"] {
+    left: 108px;
+    top: 196px;
+}
+.game-cell[data-x="2"][data-y="2"] {
+    left: 196px;
+    top: 196px;
+}
+.game-cell[data-x="3"][data-y="2"] {
+    left: 284px;
+    top: 196px;
+}
+.game-cell[data-x="4"][data-y="2"] {
+    left: 372px;
+    top: 196px;
+}
+.game-cell[data-x="5"][data-y="2"] {
+    left: 460px;
+    top: 196px;
+}
+.game-cell[data-x="6"][data-y="2"] {
+    left: 548px;
+    top: 196px;
 }
 
-.oval-0-3 {
-    top: 17px;
-    left: 280px;
+/* Fourth row */
+.game-cell[data-x="0"][data-y="3"] {
+    left: 18px;
+    top: 284px;
+}
+.game-cell[data-x="1"][data-y="3"] {
+    left: 108px;
+    top: 284px;
+}
+.game-cell[data-x="2"][data-y="3"] {
+    left: 196px;
+    top: 284px;
+}
+.game-cell[data-x="3"][data-y="3"] {
+    left: 284px;
+    top: 284px;
+}
+.game-cell[data-x="4"][data-y="3"] {
+    left: 372px;
+    top: 284px;
+}
+.game-cell[data-x="5"][data-y="3"] {
+    left: 460px;
+    top: 284px;
+}
+.game-cell[data-x="6"][data-y="3"] {
+    left: 548px;
+    top: 284px;
 }
 
-.oval-0-4 {
-    top: 17px;
-    left: 367px;
+/* Fifth row */
+.game-cell[data-x="0"][data-y="4"] {
+    left: 18px;
+    top: 372px;
+}
+.game-cell[data-x="1"][data-y="4"] {
+    left: 108px;
+    top: 372px;
+}
+.game-cell[data-x="2"][data-y="4"] {
+    left: 196px;
+    top: 372px;
+}
+.game-cell[data-x="3"][data-y="4"] {
+    left: 284px;
+    top: 372px;
+}
+.game-cell[data-x="4"][data-y="4"] {
+    left: 372px;
+    top: 372px;
+}
+.game-cell[data-x="5"][data-y="4"] {
+    left: 460px;
+    top: 372px;
+}
+.game-cell[data-x="6"][data-y="4"] {
+    left: 548px;
+    top: 372px;
 }
 
-.oval-0-5 {
-    top: 17px;
-    left: 455px;
+/* Sixth row */
+.game-cell[data-x="0"][data-y="5"] {
+    left: 18px;
+    top: 460px;
 }
-
-.oval-0-6 {
-    top: 17px;
-    left: 545px;
+.game-cell[data-x="1"][data-y="5"] {
+    left: 108px;
+    top: 460px;
 }
-
-/* Deuxièmes Lignes */
-
-.oval-1-0 {
-    top: 105px;
-    left: 16px;
+.game-cell[data-x="2"][data-y="5"] {
+    left: 196px;
+    top: 460px;
 }
-
-.oval-1-1 {
-    top: 105px;
-    left: 105px;
+.game-cell[data-x="3"][data-y="5"] {
+    left: 284px;
+    top: 460px;
 }
-
-.oval-1-2 {
-    top: 105px;
-    left: 193px;
+.game-cell[data-x="4"][data-y="5"] {
+    left: 372px;
+    top: 460px;
 }
-
-.oval-1-3 {
-    top: 105px;
-    left: 281px;
+.game-cell[data-x="5"][data-y="5"] {
+    left: 460px;
+    top: 460px;
 }
-
-.oval-1-4 {
-    top: 105px;
-    left: 368px;
+.game-cell[data-x="6"][data-y="5"] {
+    left: 548px;
+    top: 460px;
 }
-
-.oval-1-5 {
-    top: 105px;
-    left: 456px;
-}
-
-.oval-1-6 {
-    top: 105px;
-    left: 546px;
-}
-
-/* Troisième Lignes */
-
-.oval-2-0 {
-    top: 193px;
-    left: 16px;
-}
-
-.oval-2-1 {
-    top: 193px;
-    left: 105px;
-}
-
-.oval-2-2 {
-    top: 193px;
-    left: 193px;
-}
-
-.oval-2-3 {
-    top: 193px;
-    left: 281px;
-}
-
-.oval-2-4 {
-    top: 193px;
-    left: 368px;
-}
-
-.oval-2-5 {
-    top: 193px;
-    left: 456px;
-}
-
-.oval-2-6 {
-    top: 193px;
-    left: 546px;
-}
-
-
-/* Quatrième Lignes */
-
-.oval-4-0 {
-    top: 280px;
-    left: 16px;
-}
-
-.oval-4-1 {
-    top: 280px;
-    left: 105px;
-}
-
-.oval-4-2 {
-    top: 280px;
-    left: 193px;
-}
-
-.oval-4-3 {
-    top: 280px;
-    left: 281px;
-}
-
-.oval-4-4 {
-    top: 280px;
-    left: 368px;
-}
-
-.oval-4-5 {
-    top: 280px;
-    left: 456px;
-}
-
-.oval-4-6 {
-    top: 280px;
-    left: 546px;
-}
-
-/* Cinquième Lignes */
-
-.oval-5-0 {
-    top: 366px;
-    left: 16px;
-}
-
-.oval-5-1 {
-    top: 366px;
-    left: 105px;
-}
-
-.oval-5-2 {
-    top: 366px;
-    left: 193px;
-}
-
-.oval-5-3 {
-    top: 366px;
-    left: 281px;
-}
-
-.oval-5-4 {
-    top: 366px;
-    left: 368px;
-}
-
-.oval-5-5 {
-    top: 366px;
-    left: 456px;
-}
-
-.oval-5-6 {
-    top: 366px;
-    left: 546px;
-}
-
-/* Sixième Lignes */
-
-.oval-6-0 {
-    top: 455px;
-    left: 16px;
-}
-
-.oval-6-1 {
-    top: 455px;
-    left: 105px;
-}
-
-.oval-6-2 {
-    top: 455px;
-    left: 193px;
-}
-
-.oval-6-3 {
-    top: 455px;
-    left: 281px;
-}
-
-.oval-6-4 {
-    top: 455px;
-    left: 368px;
-}
-
-.oval-6-5 {
-    top: 455px;
-    left: 456px;
-}
-
-.oval-6-6 {
-    top: 455px;
-    left: 546px;
-}
-
