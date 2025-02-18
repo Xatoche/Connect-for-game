@@ -114,6 +114,27 @@ function checkDirection(row, col, player, dx, dy) {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // // Affiche la grille quand on clique sur le bouton du game-menu
 
 
