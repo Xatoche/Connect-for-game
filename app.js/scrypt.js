@@ -62,6 +62,7 @@ $gameCells.forEach(function ($gameScreenGridCell) {
         }
 
         // Change de joueur
+        
         currentPlayer = currentPlayer === "r" ? "y" : "r";
         break;
       }
@@ -70,6 +71,8 @@ $gameCells.forEach(function ($gameScreenGridCell) {
 });
 
 // Fonction de Vérification de victoire
+
+
 function verifVictoire(row, col, player) {
   return (
     checkDirection(row, col, player, 1, 0) || // Horizontal
@@ -84,6 +87,7 @@ function verifVictoire(row, col, player) {
 function checkDirection(row, col, player, dx, dy) {
   let count = 1;
 
+
   // Vérification vers l'avant
 
   for (let step = 1; step < 4; step++) {
@@ -96,6 +100,8 @@ function checkDirection(row, col, player, dx, dy) {
   }
 
   // Vérification vers l'arrière
+
+
   for (let step = 1; step < 4; step++) {
     let newRow = row - step * dy;
     let newCol = col - step * dx;
@@ -105,86 +111,5 @@ function checkDirection(row, col, player, dx, dy) {
     count++;
   }
 
-  return count >= 4; // Retourne vrai si 4 alignés
+  return count >= 4;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // Affiche la grille quand on clique sur le bouton du game-menu
-
-
-// $gameCells.forEach(function ($gameScreenGridCell) {
-//   $gameScreenGridCell.addEventListener("click", function () {
-//     let dataX = parseInt($gameScreenGridCell.getAttribute("data-x"));
-
-//     console.log("X:", dataX);
-
-//     for (let i = 5; i >= 0; i--) {
-//       console.log("Y:", i);
-
-//       if (gameBoard[i][dataX] === "") {
-//         console.log("C'est vide");
-
-//         gameBoard[i][dataX] = currentPlayer; 
-//       }
-//     }
-
-//         // Cree un variable targetCell et selectionne ce que contient game-celle à la position data x et data x cliquer via la function gameCeels  
-
-//         let targetCell = document.querySelector(".game-cell[data-x='" + dataX + "']    [data-y='" + i + "']");
-//         if (targetCell) {
-//           let img = targetCell.querySelector("img");
-
-//           if (!img) {
-//             img = document.createElement("img");
-//             targetCell.appendChild(img);
-//           }
-
-          // console.log(gameBoard)
-
-//             if (currentPlayer === "r") {
-//               img.src = "./data/svg/Oval rouge.svg";
-//             img.alt = "Pion Rouge";
-//           } else {
-
-//             img.src = "./data/svg/Oval Jaune.svg";
-//                 img.alt = "Pion Jaune";
-//           }
-//               img.style.display = "block";
-//         }
-
-//         // Fais en sorte que les players varie entre rouger et jaune
-
-//         currentPlayer = currentPlayer === "r" ? "y" : "r";
-//         break; 
-//       } else {
-        // console.log("C'est pas vide");
-//       }
-//     }
-//    });
-// });
